@@ -18,8 +18,15 @@
         "name": "next"
       }
     ],
-    "paths": {
-      "@/*": ["./*"]
+    "baseUrl": ".",  // Добавлено из второго конфига
+    "paths": {       // Объединяем пути из обоих конфигов
+      "@/*": ["./src/*"],       // Заменяем старый "@/*": ["./*"] на новый
+      "@app/*": ["./src/app/*"],
+      "@widgets/*": ["./src/widgets/*"],
+      "@features/*": ["./src/features/*"],
+      "@entities/*": ["./src/entities/*"],
+      "@shared/*": ["./src/shared/*"],
+      "@public/*": ["./public/*"]
     }
   },
   "include": [
